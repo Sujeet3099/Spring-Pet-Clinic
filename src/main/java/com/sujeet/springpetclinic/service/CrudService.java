@@ -3,7 +3,7 @@ package com.sujeet.springpetclinic.service;
 import java.util.Set;
 
 public interface CrudService<T,ID> {
-    Set<T> findByAll();
+    Set<T> findAll();
 
     T findById(ID id);
 

@@ -1,14 +1,15 @@
 package com.sujeet.springpetclinic.service.map;
 
-import com.sujeet.springpetclinic.model.Owner;
-import com.sujeet.springpetclinic.service.CrudService;
+import com.sujeet.springpetclinic.model.Vet;
+import com.sujeet.springpetclinic.service.VetService;
 
 import java.util.Set;
 
-public class OwnerMapService extends AbstractMapService<Owner,Long> implements CrudService<Owner,Long> {
+public class VetServiceMap extends AbstractMapService<Vet,Long> implements VetService {
+
 
     @Override
-    public Set<Owner> findByAll() {
+    public Set<Vet> findAll() {
         return super.findAll();
     }
 
@@ -19,17 +20,17 @@ public class OwnerMapService extends AbstractMapService<Owner,Long> implements C
     }
 
     @Override
-    public void delete(Owner object) {
+    public void delete(Vet object) {
         super.delete(object);
     }
 
     @Override
-    public Owner save(Owner object) {
+    public Vet save(Vet object) {
         return super.save(object, object.getId());
     }
 
     @Override
-    public Owner findById(Long id) {
+    public Vet findById(Long id) {
         return super.findById(id);
     }
 }
