@@ -7,7 +7,9 @@ import com.sujeet.springpetclinic.service.VetService;
 import com.sujeet.springpetclinic.service.map.OwnerServiceMap;
 import com.sujeet.springpetclinic.service.map.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 
+@Component
 public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;

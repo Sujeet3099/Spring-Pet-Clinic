@@ -4,7 +4,29 @@
     <meta charset="UTF-8">
     <title>Owners</title>
 </head>
+
 <body>
 <h1 th:text="'List of Owners'">Owners</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+    </tr>
+    </thead>
+
+    <tbody>
+
+    <!--/*@thymesVar id="owner" type="com.sujeet.springpetclinic.model.Owner"*/-->
+    <tr th:each="owner : ${owners}">
+        <th th:text="${owner.id}">1</th>
+        
+        <th th:text="${owner.firstName}">Sujeet</th>
+        <th th:text="${owner.lastName}">Kumar</th>
+    </tr>
+    </tbody>
+</table>
+
 </body>
 </html>
